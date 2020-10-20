@@ -46,3 +46,94 @@ Experimental_Case08_InjectionInToCssSelector_jsp_userinput_myinputvalue | no | 1
 Experimental_Case09_InjectionInToCssSelectorAttributeName_jsp_userinput_myinputvalue | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
 Experimental_Case10_InjectionInToCssProperty_jsp_userinput_myinputvalue | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
 Experimental_Case11_InjectionInToCssPropertyValue_jsp_userinput_myinputvalue | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
+
+## Firing Range
+Test case | Polyglot successful? | Best context weight (dynamic) | Best context name (dynamic) | # Requests (dynamic) | Best context weight (static) | Best context name (dynamic) | # Requests (static)
+-------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- 
+escape_js_encodeURIComponent_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_js_escape_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_js_html_escape_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_serverside_encodeUrl_attribute_name_q_teststr | no | 50 | Attribute name in TAG aoeu123%0d%2520%253ehydra%0d+%3ehydra | 157 | 50 | Attribute name in TAG aoeu123 | 1
+escape_serverside_encodeUrl_attribute_quoted_q_teststr | no | 50 | Attribute value in TAG attribute | 25 | 50 | Attribute value in TAG attribute | 1
+escape_serverside_encodeUrl_attribute_script_q_teststr | no | 100 | Attribute value in SCRIPT src | 1 | 100 | Attribute value in SCRIPT src | 1
+escape_serverside_encodeUrl_attribute_singlequoted_q_teststr | no | 50 | Attribute value in TAG attribute | 25 | 50 | Attribute value in TAG attribute | 1
+escape_serverside_encodeUrl_attribute_unquoted_q_teststr | no | 50 | Attribute value in TAG attribute | 25 | 50 | Attribute value in TAG attribute | 1
+escape_serverside_encodeUrl_body_comment_q_teststr | no | 10 | Comment in BODY | 29 | 10 | Comment in BODY | 2061
+escape_serverside_encodeUrl_body_q_teststr | no | 50 | Text node in BODY | 91 | 50 | Text node in BODY | 2048
+escape_serverside_encodeUrl_css_import_q_teststr | no | 50 | Attribute value in LINK href | 25 | 50 | Attribute value in LINK href | 1
+escape_serverside_encodeUrl_css_style_font_value_q_teststr | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
+escape_serverside_encodeUrl_css_style_q_teststr | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
+escape_serverside_encodeUrl_css_style_value_q_teststr | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
+escape_serverside_encodeUrl_head_q_teststr | no | 50 | Text node in BODY | 91 | 50 | Text node in BODY | 2055
+escape_serverside_encodeUrl_js_assignment_q_teststr | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_serverside_encodeUrl_js_comment_q_teststr | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_serverside_encodeUrl_js_eval_q_teststr | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_serverside_encodeUrl_js_quoted_string_q_teststr | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_serverside_encodeUrl_js_singlequoted_string_q_teststr | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_serverside_encodeUrl_js_slashquoted_string_q_teststr | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_serverside_encodeUrl_tagname_q_teststr | no | 79 | Tag name in AOEU123%0A%3E%3CSTYLE%2FONCLICK | 2045 | 79 | Tag name in AOEU123%3E%3CSCRIPT%259SRC%259%253D%2522HTTPS%3A%2F%2FMATRIS.SBA-RESEARCH.ORG%2FEVIL.JS | 1273
+escape_serverside_encodeUrl_textarea_q_teststr | no | 50 | Text node in TEXTAREA | 91 | 50 | Text node in TEXTAREA | 2069
+escape_serverside_escapeHtml_attribute_name_q_teststr | no | 50 | Attribute name in TAG &gt;hydra | 157 | 50 | Attribute name in TAG aoeu123 | 1
+escape_serverside_escapeHtml_attribute_quoted_q_teststr | no | 50 | Attribute name in TAG &gt;hydra%20%2f%3ehydra\" | 73 | 50 | Attribute value in TAG attribute | 1
+escape_serverside_escapeHtml_attribute_script_q_teststr | no | 100 | Attribute value in SCRIPT src | 1 | 100 | Attribute value in SCRIPT src | 1
+escape_serverside_escapeHtml_attribute_singlequoted_q_teststr | no | 50 | Attribute name in TAG &gt;hydra%20%2f%3ehydra' | 73 | 50 | Attribute value in TAG attribute | 1
+escape_serverside_escapeHtml_attribute_unquoted_q_teststr | no | 50 | Attribute name in TAG %3ehydra%20%2f%3ehydra | 145 | 50 | Attribute value in TAG attribute | 1
+escape_serverside_escapeHtml_body_comment_q_teststr | no | 10 | Comment in BODY | 29 | 10 | Comment in BODY | 2061
+escape_serverside_escapeHtml_body_q_teststr | no | 50 | Text node in BODY | 91 | 50 | Text node in BODY | 2052
+escape_serverside_escapeHtml_css_import_q_teststr | no | 50 | Attribute name in LINK &gt;hydra%20%2f%3ehydra\" | 73 | 50 | Attribute value in LINK href | 1
+escape_serverside_escapeHtml_css_style_font_value_q_teststr | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
+escape_serverside_escapeHtml_css_style_q_teststr | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
+escape_serverside_escapeHtml_css_style_value_q_teststr_escape_HTML_ESCAPE | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
+escape_serverside_escapeHtml_head_q_teststr | no | 50 | Text node in BODY | 91 | 50 | Text node in BODY | 2041
+escape_serverside_escapeHtml_js_assignment_q_teststr | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_serverside_escapeHtml_js_comment_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_serverside_escapeHtml_js_eval_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_serverside_escapeHtml_js_quoted_string_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_serverside_escapeHtml_js_singlequoted_string_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_serverside_escapeHtml_js_slashquoted_string_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+escape_serverside_escapeHtml_tagname_q_teststr | no | 50 | Attribute name in AOEU123%2F%3E%3CSVG onclick | 2032 | 50 | Attribute name in AOEU123 evil.js | 1273
+escape_serverside_escapeHtml_textarea_q_teststr | no | 50 | Text node in TEXTAREA | 91 | 50 | Text node in TEXTAREA | 2051
+reflected_contentsniffing_plaintext_q_teststr | no | 50 | Text node in PRE | 7 | 50 | Text node in PRE | 39
+reflected_escapedparameter_js_eventhandler_quoted_DOUBLE_QUOTED_ATTRIBUTE_q_teststr | no | 50 | Attribute value in DIV onclick | 25 | 50 | Attribute value in DIV onclick | 1
+reflected_escapedparameter_js_eventhandler_singlequoted_SINGLE_QUOTED_ATTRIBUTE_q_teststr | no | 50 | Attribute value in DIV onclick | 25 | 50 | Attribute value in DIV onclick | 1
+reflected_escapedparameter_js_eventhandler_unquoted_UNQUOTED_ATTRIBUTE_q_teststr | no | 50 | Attribute name in DIV %3ehydra%20%2f%3ehydra | 145 | 50 | Attribute value in DIV onclick | 1
+reflected_filteredcharsets_attribute_unquoted_DoubleQuoteSinglequote_q_teststr | no | 100 | Text node in SCRIPT | 7 | 50 | Attribute value in TAG attribute | 1
+reflected_filteredcharsets_body_SpaceDoubleQuoteSlashEquals_q_teststr | no | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 6
+reflected_filteredstrings_body_caseInsensitive_script_q_teststr | no | 100 | Text node in STYLE | 290 | 100 | Text node in STYLE | 2
+reflected_filteredstrings_body_caseSensitive_script_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 2
+reflected_filteredstrings_body_caseSensitive_SCRIPT_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 2
+reflected_parameter_attribute_name_q_teststr | yes | 100 | Text node in SCRIPT | 13 | 50 | Attribute name in TAG aoeu123 | 1
+reflected_parameter_attribute_quoted_q_teststr | yes | 100 | Text node in SCRIPT | 17 | 50 | Attribute value in TAG attribute | 1
+reflected_parameter_attribute_script_q_teststr | no | 100 | Attribute value in SCRIPT src | 1 | 100 | Attribute value in SCRIPT src | 1
+reflected_parameter_attribute_singlequoted_q_teststr | yes | 100 | Text node in SCRIPT | 20 | 50 | Attribute value in TAG attribute | 1
+reflected_parameter_attribute_unquoted_q_teststr | yes | 100 | Text node in SCRIPT | 7 | 50 | Attribute value in TAG attribute | 1
+reflected_parameter_body_400_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 2
+reflected_parameter_body_401_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 2
+reflected_parameter_body_403_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 2
+reflected_parameter_body_404_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 2
+reflected_parameter_body_500_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 3
+reflected_parameter_body_comment_q_teststr | yes | 100 | Text node in SCRIPT | 28 | 100 | Text node in SCRIPT | 3
+reflected_parameter_body_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 3
+reflected_parameter_css_style_font_value_q_teststr | yes | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
+reflected_parameter_css_style_q_teststr | yes | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
+reflected_parameter_css_style_value_q_teststr | yes | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
+reflected_parameter_head_q_teststr | yes | 100 | Text node in SCRIPT | 3 | 100 | Text node in STYLE | 4
+reflected_parameter_iframe_attribute_value_q_teststr | no | 50 | Text node in IFRAME | 2044 | 50 | Attribute value in IFRAME attribute | 1
+reflected_parameter_iframe_srcdoc_q_teststr | no | 50 | Text node in IFRAME | 2033 | 50 | Attribute value in IFRAME srcdoc | 1
+reflected_parameter_js_assignment_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+reflected_parameter_js_comment_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+reflected_parameter_js_eval_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+reflected_parameter_js_quoted_string_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+reflected_parameter_js_singlequoted_string_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+reflected_parameter_js_slashquoted_string_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+reflected_parameter_noscript_q_teststr | no | 50 | Text node in NOSCRIPT | 91 | 50 | Text node in NOSCRIPT | 2065
+reflected_parameter_style_attribute_value_q_teststr | no | 100 | Text node in STYLE | 10 | 50 | Attribute value in STYLE attribute | 1
+reflected_parameter_tagname_q_teststr | yes | 100 | Text node in SCRIPT | 418 | 100 | Text node in SCRIPT | 2
+reflected_parameter_textarea_attribute_value_q_teststr | no | 50 | Text node in TEXTAREA | 2047 | 10 | Attribute value in TEXTAREA attribute | 1
+reflected_parameter_textarea_q_teststr | yes | 50 | Text node in TEXTAREA | 91 | 50 | Text node in TEXTAREA | 2080
+reflected_parameter_title_q_teststr | yes | 50 | Text node in TITLE | 91 | 50 | Text node in TITLE | 2064
+reflected_url_css_import_q_teststr | no | 50 | Attribute value in LINK href | 25 | 50 | Attribute value in LINK href | 1
+reflected_url_href_q_teststr | no | 100 | Attribute value in A href | 1 | 100 | Attribute value in A href | 1
+reflected_url_object_data_q_teststr | no | 50 | Attribute value in OBJECT data | 59 | 50 | Attribute value in OBJECT data | 1
+reflected_url_object_param_q_teststr | no | 50 | Attribute value in PARAM value | 25 | 50 | Attribute value in PARAM value | 1
+reflected_url_script_src_q_teststr | no | 100 | Attribute value in SCRIPT src | 1 | 100 | Attribute value in SCRIPT src | 1
