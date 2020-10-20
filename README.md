@@ -49,6 +49,7 @@ Experimental_Case10_InjectionInToCssProperty_jsp_userinput_myinputvalue | no | 1
 Experimental_Case11_InjectionInToCssPropertyValue_jsp_userinput_myinputvalue | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
 
 ## Firing Range
+
 Test case | Polyglot successful? | Best context weight (dynamic) | Best context name (dynamic) | # Requests (dynamic) | Best context weight (static) | Best context name (dynamic) | # Requests (static)
 -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- 
 escape_js_encodeURIComponent_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
@@ -140,11 +141,13 @@ reflected_url_object_param_q_teststr | no | 50 | Attribute value in PARAM value 
 reflected_url_script_src_q_teststr | no | 100 | Attribute value in SCRIPT src | 1 | 100 | Attribute value in SCRIPT src | 1
 
 ## Juice Shop
+
 Test case | Polyglot successful? | Best context weight (dynamic) | Best context name (dynamic) | # Requests (dynamic) | Best context weight (static) | Best context name (dynamic) | # Requests (static)
 -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- 
 Juice Shop | yes | 50 | Text node in B | 29 | 100 | Text node in SCRIPT | 1
 
 ## Real-Life Vulnerabilities
+
 Test case | Polyglot successful? | Best context weight (dynamic) | Best context name (dynamic) | # Requests (dynamic) | Best context weight (static) | Best context name (dynamic) | # Requests (static)
 -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- 
 MaraCMS | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
