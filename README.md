@@ -151,3 +151,7 @@ Tailor | yes | 100 | Text node in SCRIPT | 7 | 100 | Text node in SCRIPT | 2
 TestLink (deDeleteStep) | yes | 100 | Text node in SCRIPT | 379 | 100 | Text node in SCRIPT | 2
 TestLink (reqURI) | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
 MyBB | yes | - | (see paper) | - | - | (see paper) | -
+
+# Additional Material
+
+While we would like to offer a download of the Hydra source code at this time, contractual obligations prevent us from doing so at this time. We are working on offering a solution.
