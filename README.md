@@ -137,3 +137,17 @@ reflected_url_href_q_teststr | no | 100 | Attribute value in A href | 1 | 100 | 
 reflected_url_object_data_q_teststr | no | 50 | Attribute value in OBJECT data | 59 | 50 | Attribute value in OBJECT data | 1
 reflected_url_object_param_q_teststr | no | 50 | Attribute value in PARAM value | 25 | 50 | Attribute value in PARAM value | 1
 reflected_url_script_src_q_teststr | no | 100 | Attribute value in SCRIPT src | 1 | 100 | Attribute value in SCRIPT src | 1
+
+## Juice Shop
+Test case | Polyglot successful? | Best context weight (dynamic) | Best context name (dynamic) | # Requests (dynamic) | Best context weight (static) | Best context name (dynamic) | # Requests (static)
+-------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- 
+Juice Shop | yes | 50 | Text node in B | 29 | 100 | Text node in SCRIPT | 1
+
+## Real-Life Vulnerabilities
+Test case | Polyglot successful? | Best context weight (dynamic) | Best context name (dynamic) | # Requests (dynamic) | Best context weight (static) | Best context name (dynamic) | # Requests (static)
+-------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- 
+MaraCMS | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+Tailor | yes | 100 | Text node in SCRIPT | 7 | 100 | Text node in SCRIPT | 2
+TestLink (deDeleteStep) | yes | 100 | Text node in SCRIPT | 379 | 100 | Text node in SCRIPT | 2
+TestLink (reqURI) | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
+MyBB | yes | - | (see paper) | - | - | (see paper) | -
