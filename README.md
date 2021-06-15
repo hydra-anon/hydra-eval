@@ -123,6 +123,8 @@ E09 | ✕ | 1 | 1 | 15-18 | ✕
 E10 | ✕ | 1 | 1 | 15-19 | ✕
 E11 | ✕ | 1 | 1 | 15-18 | ✕
 
+![WAVSEP evaluation results](wavsep-res.png)
+
 ## Firing Range
 
 The following table details which of the evaluated tools was able to exploit the respective SUT.
@@ -318,6 +320,9 @@ F89 | 2 | 2 | 2 | 4-5 | ✕
 F90 | 2 | 2 | 2 | 4 | ✕
 F91 | ✕ | 44-290 | 2 | 4-5 | ✕
 
+![Firing Range evaluation results (1/2)](firingrange.part1.png)
+![Firing Range evaluation results (2/2)](firingrange.part2.png)
+
 ## Juice Shop
 
 The following table details which of the evaluated tools was able to exploit the respective SUT.
@@ -355,6 +360,8 @@ Mara | 2 | 1 | 1 | 10 | 202
 Tailor | 2 | 6-8 | 2-3 | ✕ | 88
 TL01 | 2 | 1 | 1 | ✕ | ✕
 TL02 | 2 | 124-379 | 2-3 | ✕ | ✕
+
+![Juice Shop and real-world applications evaluation results](others.png)
 
 # Additional Material
 
