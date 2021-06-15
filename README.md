@@ -26,6 +26,8 @@ TestLink    | 2/2   | 2/2   | 2/2   | 2/2   | 0/2   | 0/2
 
 ## WAVSEP
 
+The following table details which of the evaluated tools was able to exploit the respective SUT.
+
 ID  | Title | HydraShort | Hydra | HydraStatic | w3af | AppScan
 ------ | ------ | ------ | ------ | ------ | ------ | ------
 B01 | Case 1 - RXSS via tag injection into the scope of an HTML page | ✓ | ✓ | ✓ | ✓ | ✓
@@ -73,7 +75,57 @@ E10 | RXSS Injection in CSS Property | ✕ | ✓ | ✓ | ✓ | ✕
 E11 | RXSS Injection in CSS Property Value | ✕ | ✓ | ✓ | ✓ | ✕
 
 
+The following table shows the minimum and maximum number of requests required by each of the evaluated solutions to exploit the given SUT. Note that the XSS polyglot shortcut will always require exactly two requests if it is successful (one to determine the current output context, one to inject the shortcut).
+
+ID  | HydraShort | Hydra | HydraStatic | w3af | AppScan
+------ | ------ | ------ | ------ | ------ | ------
+B01 | 2 | 2 | 2 | 5-6 | 69
+B02 | 2 | ✕ | ✕ | 5-6 | ✕
+B03 | 2 | 20-29 | ✕ | 5-7 | 75
+B04 | 2 | 25-34 | 3-4 | 5-7 | 69
+B05 | ✕ | 1 | 1 | 5-9 | 190-211
+B06 | ✕ | 1 | 1 | 15-16 | 76
+B07 | ✕ | 1 | 1 | 15-17 | 76
+B08 | ✕ | 1 | 1 | 15-17 | ✕
+B09 | ✕ | 132-191 | ✕ | 15-17 | 88
+B10 | ✕ | 1 | 1 | 15-18 | 81
+B11 | ✕ | 1 | 1 | 15-17 | 81
+B12 | ✕ | 1 | 1 | 15-18 | 81
+B13 | ✕ | 1 | 1 | 15-17 | 81
+B14 | ✕ | 1 | 1 | 15-16 | ✕
+B15 | ✕ | 1 | 1 | 15-16 | ✕
+B16 | 2 | 1 | 1 | 15-16 | 204
+B17 | ✕ | 1 | 1 | 15-17 | 143-144
+B18 | ✕ | 1 | 1 | 15-16 | 143
+B19 | ✕ | 1 | 1 | 15-17 | 142-144
+B20 | ✕ | 1 | 1 | 15-17 | 166-167
+B21 | ✕ | 1 | 1 | 15-17 | ✕
+B22 | ✕ | 1 | 1 | 15-16 | 81
+B23 | ✕ | 1 | 1 | 15-17 | 81
+B24 | ✕ | 1 | 1 | 15-17 | 81
+B25 | ✕ | 1 | 1 | 15-17 | ✕
+B26 | ✕ | 1 | 1 | 15-17 | ✕
+B27 | ✕ | 1 | 1 | 15-17 | ✕
+B28 | 2 | 1 | 1 | 15-17 | ✕
+B29 | ✕ | 1 | 1 | 15-17 | ✕
+B30 | 2 | 4-6 | 2 | 6-8 | 108
+B31 | ✕ | ✕ | ✕ | 5-7 | ✕
+B32 | 2 | ✕ | ✕ | 5-7 | 71
+E01 | 2 | 221-280 | 2 | 5-9 | 84-136
+E02 | ✕ | ✕ | ✕ | ✕ | ✕
+E03 | ✕ | ✕ | ✕ | 16-19 | 75
+E04 | ✕ | ✕ | ✕ | ✕ | ✕
+E05 | ✕ | 1 | 1 | ✕ | ✕
+E06 | ✕ | 1 | 1 | ✕ | ✕
+E07 | ✕ | 1 | 1 | ✕ | ✕
+E08 | ✕ | 1 | 1 | 15-18 | ✕
+E09 | ✕ | 1 | 1 | 15-18 | ✕
+E10 | ✕ | 1 | 1 | 15-19 | ✕
+E11 | ✕ | 1 | 1 | 15-18 | ✕
+
 ## Firing Range
+
+The following table details which of the evaluated tools was able to exploit the respective SUT.
 
 ID  | Title | HydraShort | Hydra | HydraStatic | w3af | AppScan
 ------ | ------ | ------ | ------ | ------ | ------ | ------
@@ -169,13 +221,121 @@ F89 | Parameter - Body - Blocks lowercase script | ✓ | ✓ | ✓ | ✓ | ✕
 F90 | Parameter - Body - Blocks uppercase script | ✓ | ✓ | ✓ | ✓ | ✕
 F91 | Parameter - Body - Blocks any script | ✕ | ✓ | ✓ | ✓ | ✕
 
+
+The following table shows the minimum and maximum number of requests required by each of the evaluated solutions to exploit the given SUT. Note that the XSS polyglot shortcut will always require exactly two requests if it is successful (one to determine the current output context, one to inject the shortcut).
+
+ID  | HydraShort | Hydra | HydraStatic | w3af | AppScan
+------ | ------ | ------ | ------ | ------ | ------
+F1 | ✕ | 1 | 1 | 15-56 | ✕
+F2 | 2 | 1 | 1 | 15-26 | ✕
+F3 | 2 | 1 | 1 | 15 | ✕
+F4 | 2 | 1-30 | 1-4 | 4-36 | 69-180
+F5 | 2 | 2-418 | 2-3 | 4-5 | 75
+F6 | 2 | 1-10 | 1 | 4-15 | 69-124
+F7 | 2 | 1 | 1 | 4-15 | 75-85
+F8 | 2 | 1-7 | 1-6 | 4-15 | 69-88
+F9 | 2 | 2-290 | 2 | 4-15 | 82
+F10 | ✕ | ✕ | ✕ | ✕ | ✕
+F11 | ✕ | ✕ | ✕ | 15 | ✕
+F12 | ✕ | ✕ | ✕ | ✕ | ✕
+F13 | ✕ | ✕ | ✕ | 15 | ✕
+F14 | ✕ | ✕ | ✕ | ✕ | ✕
+F15 | ✕ | ✕ | ✕ | 15 | ✕
+F16 | ✕ | ✕ | ✕ | ✕ | ✕
+F17 | ✕ | ✕ | ✕ | 15 | ✕
+F18 | ✕ | ✕ | ✕ | ✕ | ✕
+F19 | ✕ | 1 | 1 | 56 | ✕
+F20 | ✕ | 1 | 1 | ✕ | ✕
+F21 | ✕ | 1 | 1 | 26 | ✕
+F22 | ✕ | 1 | 1 | ✕ | ✕
+F23 | ✕ | 1 | 1 | 15 | ✕
+F24 | ✕ | 1 | 1 | ✕ | ✕
+F25 | ✕ | 1 | 1 | 15 | ✕
+F26 | ✕ | 1 | 1 | ✕ | ✕
+F27 | 2 | 1 | 1 | 15 | ✕
+F28 | ✕ | 1 | 1 | ✕ | ✕
+F29 | 2 | 1 | 1 | 15 | ✕
+F30 | ✕ | 1 | 1 | ✕ | ✕
+F31 | 2 | 1 | 1 | 15 | ✕
+F32 | ✕ | 1 | 1 | ✕ | ✕
+F33 | 2 | 1 | 1 | 15 | ✕
+F34 | ✕ | 1 | 1 | ✕ | ✕
+F35 | 2 | 1 | 1 | 15 | ✕
+F36 | ✕ | 1 | 1 | ✕ | ✕
+F37 | ✕ | 1 | 1 | 15 | ✕
+F38 | ✕ | 1 | 1 | ✕ | ✕
+F39 | ✕ | ✕ | ✕ | ✕ | ✕
+F40 | ✕ | ✕ | ✕ | ✕ | ✕
+F41 | ✕ | ✕ | ✕ | 15 | ✕
+F42 | ✕ | ✕ | ✕ | ✕ | ✕
+F43 | 2 | 1 | 1 | 15 | 87
+F44 | 2 | 1 | 1 | 15 | 87
+F45 | 2 | 1 | 1 | 15 | 87
+F46 | 2 | 3 | 3 | 35-36 | 180
+F47 | 2 | 2 | 3-4 | 5 | 69
+F48 | 2 | ✕ | ✕ | 4-5 | 69
+F49 | 2 | 20-30 | 3-4 | 4-5 | 69
+F50 | 2 | 3-418 | 2 | 4 | 75
+F51 | 2 | 5-7 | ✕ | 4 | 75
+F52 | 2 | 5-20 | ✕ | 5 | 75
+F53 | 2 | 8-22 | ✕ | 4 | 75
+F54 | 2 | 8-15 | ✕ | 4-5 | ✕
+F55 | 2 | 2 | 2 | 5 | ✕
+F56 | 2 | 2 | 2 | 5 | ✕
+F57 | 2 | 2 | 2 | 5 | ✕
+F58 | 2 | 2 | 2 | ✕ | ✕
+F59 | 2 | 2 | 2-3 | ✕ | ✕
+F60 | ✕ | ✕ | ✕ | 4-5 | 69
+F61 | ✕ | ✕ | ✕ | 5 | 124
+F62 | 2 | ✕ | ✕ | 8-9 | ✕
+F63 | ✕ | ✕ | ✕ | 4-5 | ✕
+F64 | ✕ | ✕ | ✕ | 5 | ✕
+F65 | ✕ | 4-10 | ✕ | 5 | ✕
+F66 | 2 | 1 | 1 | 13-15 | ✕
+F67 | 2 | 1 | 1 | 4-5 | ✕
+F68 | 2 | 1 | 1 | 4-5 | ✕
+F69 | ✕ | ✕ | ✕ | 15 | 75
+F70 | ✕ | ✕ | ✕ | 15 | 75
+F71 | ✕ | ✕ | ✕ | 15 | 75
+F72 | 2 | 1 | 1 | 4-5 | 85
+F73 | 2 | 1 | 1 | 5 | 85
+F74 | 2 | 1 | 1 | 5 | 85
+F75 | 2 | 1 | 1 | 4 | 85
+F76 | 2 | 1 | 1 | 4 | 85
+F77 | 2 | 1 | 1 | 4-5 | ✕
+F78 | ✕ | 1 | 1 | 4-5 | ✕
+F79 | ✕ | 1 | 1 | 14-15 | 80
+F80 | ✕ | ✕ | ✕ | 14-15 | 88
+F81 | ✕ | 1 | 1 | 14 | ✕
+F82 | ✕ | ✕ | ✕ | ✕ | ✕
+F83 | ✕ | ✕ | ✕ | ✕ | ✕
+F84 | ✕ | ✕ | ✕ | 5 | 69
+F85 | ✕ | ✕ | ✕ | 14-15 | 69
+F86 | ✕ | ✕ | ✕ | 15 | 69
+F87 | ✕ | 2 | 4-6 | 14 | ✕
+F88 | ✕ | 6-7 | ✕ | 15 | ✕
+F89 | 2 | 2 | 2 | 4-5 | ✕
+F90 | 2 | 2 | 2 | 4 | ✕
+F91 | ✕ | 44-290 | 2 | 4-5 | ✕
+
 ## Juice Shop
+
+The following table details which of the evaluated tools was able to exploit the respective SUT.
 
 ID  | Title | HydraShort | Hydra | HydraStatic | w3af | AppScan
 ------ | ------ | ------ | ------ | ------ | ------ | ------
 Juice | Search request/location hash | ✓ | ✕ | ✓ | ✕ | ✕
 
+
+The following table shows the minimum and maximum number of requests required by each of the evaluated solutions to exploit the given SUT. Note that the XSS polyglot shortcut will always require exactly two requests if it is successful (one to determine the current output context, one to inject the shortcut).
+
+ID  | HydraShort | Hydra | HydraStatic | w3af | AppScan
+------ | ------ | ------ | ------ | ------ | ------
+Juice | 2 | ✕ | 2 | ✕ | ✕
+
 ## Real-world applications
+
+The following table details which of the evaluated tools was able to exploit the respective SUT.
 
 ID  | Title | HydraShort | Hydra | HydraStatic | w3af | AppScan
 ------ | ------ | ------ | ------ | ------ | ------ | ------
@@ -185,163 +345,16 @@ Tailor | Tailor Login | ✓ | ✓ | ✓ | ✕ | ✓
 TL01 | TestLink reqURI | ✓ | ✓ | ✓ | ✕ | ✕
 TL02 | TestLink show_mode | ✓ | ✓ | ✓ | ✕ | ✕
 
-# Old Appendix
 
-The following material was created based on the original draft of our work.
+The following table shows the minimum and maximum number of requests required by each of the evaluated solutions to exploit the given SUT. Note that the XSS polyglot shortcut will always require exactly two requests if it is successful (one to determine the current output context, one to inject the shortcut).
 
-## WAVSEP
-
-Test case | Polyglot successful? | Best context weight (dynamic) | Best context name (dynamic) | # Requests (dynamic) | Best context weight (static) | Best context name (dynamic) | # Requests (static)
--------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- 
-Case01_Tag2HtmlPageScope_jsp_userinput_myinputvalue | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 2
-Case02_Tag2TagScope_jsp_userinput_myinputvalue | yes | 50 | Text node in TEXTAREA | 91 | 50 | Text node in TEXTAREA | 2165
-Case03_Tag2TagStructure_jsp_userinput_myinputvalue | yes | 100 | Attribute value in INPUT onclick | 29 | 50 | Attribute value in INPUT value | 1
-Case04_Tag2HtmlComment_jsp_userinput_myinputvalue | yes | 100 | Text node in SCRIPT | 31 | 100 | Text node in SCRIPT | 3
-Case05_Tag2Frameset_jsp_userinput_myinputvalue | no | 100 | Attribute value in FRAME src | 1 | 100 | Attribute value in FRAME src | 1
-Case06_Event2TagScope_jsp_userinput_myinputvalue | no | 100 | Attribute value in IMG src | 1 | 100 | Attribute value in IMG src | 1
-Case07_Event2DoubleQuotePropertyScope_jsp_userinput_myinputvalue | no | 100 | Attribute value in IMG src | 1 | 100 | Attribute value in IMG src | 1
-Case08_Event2SingleQuotePropertyScope_jsp_userinput_myinputvalue | no | 100 | Attribute value in IMG src | 1 | 100 | Attribute value in IMG src | 1
-Case09_SrcProperty2TagStructure_jsp_userinput_myinputvalue | no | 100 | Attribute value in SCRIPT onload | 163 | 50 | Attribute value in SCRIPT id | 1
-Case10_Js2DoubleQuoteJsEventScope_jsp_userinput_myinputvalue | no | 100 | Attribute value in INPUT onclick | 1 | 100 | Attribute value in INPUT onclick | 1
-Case11_Js2SingleQuoteJsEventScope_jsp_userinput_myinputvalue | no | 100 | Attribute value in INPUT onclick | 1 | 100 | Attribute value in INPUT onclick | 1
-Case12_Js2JsEventScope_jsp_userinput_myinputvalue | no | 100 | Attribute value in INPUT onclick | 1 | 100 | Attribute value in INPUT onclick | 1
-Case13_Vbs2DoubleQuoteVbsEventScope_jsp_userinput_myinputvalue | no | 100 | Attribute value in INPUT onclick | 1 | 100 | Attribute value in INPUT onclick | 1
-Case14_Vbs2SingleQuoteVbsEventScope_jsp_userinput_myinputvalue | no | 100 | Attribute value in INPUT onclick | 1 | 100 | Attribute value in INPUT onclick | 1
-Case15_Vbs2VbsEventScope_jsp_userinput_myinputvalue | no | 100 | Attribute value in INPUT onclick | 1 | 100 | Attribute value in INPUT onclick | 1
-Case16_Js2ScriptSupportingProperty_jsp_userinput_myinputvalue_html | yes | 100 | Attribute value in FRAME src | 1 | 100 | Attribute value in FRAME src | 1
-Case17_Js2PropertyJsScopeDoubleQuoteDelimiter_jsp_userinput_myinputvalue | no | 100 | Attribute value in FRAME src | 1 | 100 | Attribute value in FRAME src | 1
-Case18_Js2PropertyJsScopeSingleQuoteDelimiter_jsp_userinput_myinputvalue | no | 100 | Attribute value in FRAME src | 1 | 100 | Attribute value in FRAME src | 1
-Case19_Js2PropertyJsScope_jsp_userinput_myinputvalue | no | 100 | Attribute value in FRAME src | 1 | 100 | Attribute value in FRAME src | 1
-Case20_Vbs2PropertyVbsScopeDoubleQuoteDelimiter_jsp_userinput_myinputvalue | no | 100 | Attribute value in FRAME src | 1 | 100 | Attribute value in FRAME src | 1
-Case21_Vbs2PropertyVbsScope_jsp_userinput_myinputvalue | no | 100 | Attribute value in FRAME src | 1 | 100 | Attribute value in FRAME src | 1
-Case22_Js2ScriptTagDoubleQuoteDelimiter_jsp_userinput_myinputvalue | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-Case23_Js2ScriptTagSingleQuoteDelimiter_jsp_userinput_myinputvalue | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-Case24_Js2ScriptTag_jsp_userinput_myinputvalue | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-Case25_Vbs2ScriptTagDoubleQuoteDelimiter_jsp_userinput_myinputvalue | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-Case26_Vbs2ScriptTag_jsp_userinput_myinputvalue | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-Case27_Js2ScriptTagOLCommentScope_jsp_userinput_myinputvalue | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-Case28_Js2ScriptTagMLCommentScope_jsp_userinput_myinputvalue | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-Case29_Vbs2ScriptTagOLCommentScope_jsp_userinput_myinputvalue | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-Case30_Tag2HtmlPageScopeMultipleVulnerabilities_jsp_userinput_myinputvalue_userinput2_1234 | yes | 100 | Text node in SCRIPT | 6 | 100 | Text node in STYLE | 2
-Case32_Tag2HtmlPageScopeValidViewstateRequired_jsp_userinput_myinputvalue_VIEWSTATE | yes |  | 2 | 2 |  |  | 
-Experimental_Case01_Tag2HtmlPageScope_StripScriptTag_jsp_userinput_myinputvalue | yes | 100 | Text node in STYLE | 264 | 100 | Text node in STYLE | 2
-Experimental_Case02_Tag2HtmlPageScope_SecretVectorPOST_jsp_userinput_myinputvalue | no |  | 1 |  |  |  | 
-Experimental_Case03_Tag2HtmlPageScope_ConstantAntiCSRFToken | no |  | 1 |  |  |  | 
-Experimental_Case05_ScriptlessInjectionInFormTagActionAttribute_jsp_userinput_myinputvalue | no | 100 | Attribute value in FORM action | 1 | 100 | Attribute value in FORM action | 1
-Experimental_Case06_ScriptlessInjectionInBaseTagHrefAttribute_jsp_userinput_myinputvalue | no | 100 | Attribute value in BASE href | 1 | 100 | Attribute value in BASE href | 1
-Experimental_Case07_ScriptlessInjectionInScriptTagSrcAttribute_jsp_userinput_myinputvalue | no | 100 | Attribute value in SCRIPT src | 1 | 100 | Attribute value in SCRIPT src | 1
-Experimental_Case08_InjectionInToCssSelector_jsp_userinput_myinputvalue | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
-Experimental_Case09_InjectionInToCssSelectorAttributeName_jsp_userinput_myinputvalue | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
-Experimental_Case10_InjectionInToCssProperty_jsp_userinput_myinputvalue | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
-Experimental_Case11_InjectionInToCssPropertyValue_jsp_userinput_myinputvalue | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
-
-## Firing Range
-
-Test case | Polyglot successful? | Best context weight (dynamic) | Best context name (dynamic) | # Requests (dynamic) | Best context weight (static) | Best context name (dynamic) | # Requests (static)
--------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- 
-escape_js_encodeURIComponent_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_js_escape_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_js_html_escape_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_serverside_encodeUrl_attribute_name_q_teststr | no | 50 | Attribute name in TAG aoeu123%0d%2520%253ehydra%0d+%3ehydra | 157 | 50 | Attribute name in TAG aoeu123 | 1
-escape_serverside_encodeUrl_attribute_quoted_q_teststr | no | 50 | Attribute value in TAG attribute | 25 | 50 | Attribute value in TAG attribute | 1
-escape_serverside_encodeUrl_attribute_script_q_teststr | no | 100 | Attribute value in SCRIPT src | 1 | 100 | Attribute value in SCRIPT src | 1
-escape_serverside_encodeUrl_attribute_singlequoted_q_teststr | no | 50 | Attribute value in TAG attribute | 25 | 50 | Attribute value in TAG attribute | 1
-escape_serverside_encodeUrl_attribute_unquoted_q_teststr | no | 50 | Attribute value in TAG attribute | 25 | 50 | Attribute value in TAG attribute | 1
-escape_serverside_encodeUrl_body_comment_q_teststr | no | 10 | Comment in BODY | 29 | 10 | Comment in BODY | 2061
-escape_serverside_encodeUrl_body_q_teststr | no | 50 | Text node in BODY | 91 | 50 | Text node in BODY | 2048
-escape_serverside_encodeUrl_css_import_q_teststr | no | 50 | Attribute value in LINK href | 25 | 50 | Attribute value in LINK href | 1
-escape_serverside_encodeUrl_css_style_font_value_q_teststr | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
-escape_serverside_encodeUrl_css_style_q_teststr | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
-escape_serverside_encodeUrl_css_style_value_q_teststr | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
-escape_serverside_encodeUrl_head_q_teststr | no | 50 | Text node in BODY | 91 | 50 | Text node in BODY | 2055
-escape_serverside_encodeUrl_js_assignment_q_teststr | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_serverside_encodeUrl_js_comment_q_teststr | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_serverside_encodeUrl_js_eval_q_teststr | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_serverside_encodeUrl_js_quoted_string_q_teststr | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_serverside_encodeUrl_js_singlequoted_string_q_teststr | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_serverside_encodeUrl_js_slashquoted_string_q_teststr | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_serverside_encodeUrl_tagname_q_teststr | no | 79 | Tag name in AOEU123%0A%3E%3CSTYLE%2FONCLICK | 2045 | 79 | Tag name in AOEU123%3E%3CSCRIPT%259SRC%259%253D%2522HTTPS%3A%2F%2FMATRIS.SBA-RESEARCH.ORG%2FEVIL.JS | 1273
-escape_serverside_encodeUrl_textarea_q_teststr | no | 50 | Text node in TEXTAREA | 91 | 50 | Text node in TEXTAREA | 2069
-escape_serverside_escapeHtml_attribute_name_q_teststr | no | 50 | Attribute name in TAG &gt;hydra | 157 | 50 | Attribute name in TAG aoeu123 | 1
-escape_serverside_escapeHtml_attribute_quoted_q_teststr | no | 50 | Attribute name in TAG &gt;hydra%20%2f%3ehydra\" | 73 | 50 | Attribute value in TAG attribute | 1
-escape_serverside_escapeHtml_attribute_script_q_teststr | no | 100 | Attribute value in SCRIPT src | 1 | 100 | Attribute value in SCRIPT src | 1
-escape_serverside_escapeHtml_attribute_singlequoted_q_teststr | no | 50 | Attribute name in TAG &gt;hydra%20%2f%3ehydra' | 73 | 50 | Attribute value in TAG attribute | 1
-escape_serverside_escapeHtml_attribute_unquoted_q_teststr | no | 50 | Attribute name in TAG %3ehydra%20%2f%3ehydra | 145 | 50 | Attribute value in TAG attribute | 1
-escape_serverside_escapeHtml_body_comment_q_teststr | no | 10 | Comment in BODY | 29 | 10 | Comment in BODY | 2061
-escape_serverside_escapeHtml_body_q_teststr | no | 50 | Text node in BODY | 91 | 50 | Text node in BODY | 2052
-escape_serverside_escapeHtml_css_import_q_teststr | no | 50 | Attribute name in LINK &gt;hydra%20%2f%3ehydra\" | 73 | 50 | Attribute value in LINK href | 1
-escape_serverside_escapeHtml_css_style_font_value_q_teststr | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
-escape_serverside_escapeHtml_css_style_q_teststr | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
-escape_serverside_escapeHtml_css_style_value_q_teststr_escape_HTML_ESCAPE | no | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
-escape_serverside_escapeHtml_head_q_teststr | no | 50 | Text node in BODY | 91 | 50 | Text node in BODY | 2041
-escape_serverside_escapeHtml_js_assignment_q_teststr | no | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_serverside_escapeHtml_js_comment_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_serverside_escapeHtml_js_eval_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_serverside_escapeHtml_js_quoted_string_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_serverside_escapeHtml_js_singlequoted_string_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_serverside_escapeHtml_js_slashquoted_string_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-escape_serverside_escapeHtml_tagname_q_teststr | no | 50 | Attribute name in AOEU123%2F%3E%3CSVG onclick | 2032 | 50 | Attribute name in AOEU123 evil.js | 1273
-escape_serverside_escapeHtml_textarea_q_teststr | no | 50 | Text node in TEXTAREA | 91 | 50 | Text node in TEXTAREA | 2051
-reflected_contentsniffing_plaintext_q_teststr | no | 50 | Text node in PRE | 7 | 50 | Text node in PRE | 39
-reflected_escapedparameter_js_eventhandler_quoted_DOUBLE_QUOTED_ATTRIBUTE_q_teststr | no | 50 | Attribute value in DIV onclick | 25 | 50 | Attribute value in DIV onclick | 1
-reflected_escapedparameter_js_eventhandler_singlequoted_SINGLE_QUOTED_ATTRIBUTE_q_teststr | no | 50 | Attribute value in DIV onclick | 25 | 50 | Attribute value in DIV onclick | 1
-reflected_escapedparameter_js_eventhandler_unquoted_UNQUOTED_ATTRIBUTE_q_teststr | no | 50 | Attribute name in DIV %3ehydra%20%2f%3ehydra | 145 | 50 | Attribute value in DIV onclick | 1
-reflected_filteredcharsets_attribute_unquoted_DoubleQuoteSinglequote_q_teststr | no | 100 | Text node in SCRIPT | 7 | 50 | Attribute value in TAG attribute | 1
-reflected_filteredcharsets_body_SpaceDoubleQuoteSlashEquals_q_teststr | no | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 6
-reflected_filteredstrings_body_caseInsensitive_script_q_teststr | no | 100 | Text node in STYLE | 290 | 100 | Text node in STYLE | 2
-reflected_filteredstrings_body_caseSensitive_script_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 2
-reflected_filteredstrings_body_caseSensitive_SCRIPT_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 2
-reflected_parameter_attribute_name_q_teststr | yes | 100 | Text node in SCRIPT | 13 | 50 | Attribute name in TAG aoeu123 | 1
-reflected_parameter_attribute_quoted_q_teststr | yes | 100 | Text node in SCRIPT | 17 | 50 | Attribute value in TAG attribute | 1
-reflected_parameter_attribute_script_q_teststr | no | 100 | Attribute value in SCRIPT src | 1 | 100 | Attribute value in SCRIPT src | 1
-reflected_parameter_attribute_singlequoted_q_teststr | yes | 100 | Text node in SCRIPT | 20 | 50 | Attribute value in TAG attribute | 1
-reflected_parameter_attribute_unquoted_q_teststr | yes | 100 | Text node in SCRIPT | 7 | 50 | Attribute value in TAG attribute | 1
-reflected_parameter_body_400_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 2
-reflected_parameter_body_401_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 2
-reflected_parameter_body_403_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 2
-reflected_parameter_body_404_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 2
-reflected_parameter_body_500_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 3
-reflected_parameter_body_comment_q_teststr | yes | 100 | Text node in SCRIPT | 28 | 100 | Text node in SCRIPT | 3
-reflected_parameter_body_q_teststr | yes | 100 | Text node in SCRIPT | 2 | 100 | Text node in STYLE | 3
-reflected_parameter_css_style_font_value_q_teststr | yes | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
-reflected_parameter_css_style_q_teststr | yes | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
-reflected_parameter_css_style_value_q_teststr | yes | 100 | Text node in STYLE | 1 | 100 | Text node in STYLE | 1
-reflected_parameter_head_q_teststr | yes | 100 | Text node in SCRIPT | 3 | 100 | Text node in STYLE | 4
-reflected_parameter_iframe_attribute_value_q_teststr | no | 50 | Text node in IFRAME | 2044 | 50 | Attribute value in IFRAME attribute | 1
-reflected_parameter_iframe_srcdoc_q_teststr | no | 50 | Text node in IFRAME | 2033 | 50 | Attribute value in IFRAME srcdoc | 1
-reflected_parameter_js_assignment_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-reflected_parameter_js_comment_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-reflected_parameter_js_eval_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-reflected_parameter_js_quoted_string_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-reflected_parameter_js_singlequoted_string_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-reflected_parameter_js_slashquoted_string_q_teststr | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-reflected_parameter_noscript_q_teststr | no | 50 | Text node in NOSCRIPT | 91 | 50 | Text node in NOSCRIPT | 2065
-reflected_parameter_style_attribute_value_q_teststr | no | 100 | Text node in STYLE | 10 | 50 | Attribute value in STYLE attribute | 1
-reflected_parameter_tagname_q_teststr | yes | 100 | Text node in SCRIPT | 418 | 100 | Text node in SCRIPT | 2
-reflected_parameter_textarea_attribute_value_q_teststr | no | 50 | Text node in TEXTAREA | 2047 | 10 | Attribute value in TEXTAREA attribute | 1
-reflected_parameter_textarea_q_teststr | yes | 50 | Text node in TEXTAREA | 91 | 50 | Text node in TEXTAREA | 2080
-reflected_parameter_title_q_teststr | yes | 50 | Text node in TITLE | 91 | 50 | Text node in TITLE | 2064
-reflected_url_css_import_q_teststr | no | 50 | Attribute value in LINK href | 25 | 50 | Attribute value in LINK href | 1
-reflected_url_href_q_teststr | no | 100 | Attribute value in A href | 1 | 100 | Attribute value in A href | 1
-reflected_url_object_data_q_teststr | no | 50 | Attribute value in OBJECT data | 59 | 50 | Attribute value in OBJECT data | 1
-reflected_url_object_param_q_teststr | no | 50 | Attribute value in PARAM value | 25 | 50 | Attribute value in PARAM value | 1
-reflected_url_script_src_q_teststr | no | 100 | Attribute value in SCRIPT src | 1 | 100 | Attribute value in SCRIPT src | 1
-
-## Juice Shop
-
-Test case | Polyglot successful? | Best context weight (dynamic) | Best context name (dynamic) | # Requests (dynamic) | Best context weight (static) | Best context name (dynamic) | # Requests (static)
--------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- 
-Juice Shop | yes | 50 | Text node in B | 29 | 100 | Text node in SCRIPT | 1
-
-## Real-Life Vulnerabilities
-
-Test case | Polyglot successful? | Best context weight (dynamic) | Best context name (dynamic) | # Requests (dynamic) | Best context weight (static) | Best context name (dynamic) | # Requests (static)
--------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- 
-MaraCMS | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-Tailor | yes | 100 | Text node in SCRIPT | 7 | 100 | Text node in SCRIPT | 2
-TestLink (deDeleteStep) | yes | 100 | Text node in SCRIPT | 379 | 100 | Text node in SCRIPT | 2
-TestLink (reqURI) | yes | 100 | Text node in SCRIPT | 1 | 100 | Text node in SCRIPT | 1
-MyBB | yes | - | (see paper) | - | - | (see paper) | -
+ID  | HydraShort | Hydra | HydraStatic | w3af | AppScan
+------ | ------ | ------ | ------ | ------ | ------
+MyBB | 2 | ✕ | ✕ | ✕ | 2
+Mara | 2 | 1 | 1 | 10 | 202
+Tailor | 2 | 6-8 | 2-3 | ✕ | 88
+TL01 | 2 | 1 | 1 | ✕ | ✕
+TL02 | 2 | 124-379 | 2-3 | ✕ | ✕
 
 # Additional Material
 
