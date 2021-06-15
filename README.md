@@ -14,7 +14,7 @@ The following issues are present in the most recent submitted version of our wor
 The following table briefly summarizes the success rate of the investigated tools when applied to various SUTs. Please note that SUTs that could not be exploited by any of the tools are excluded here.
 
 Application | HydraShort+Hydra | HydraShort | Hydra | HydraStatic | w3af | AppScan
--------- | -------- | -------- | -------- | -------- | -------- | --------
+-------- | -------- | -------- | -------- | -------- | -------- | -------
 WAVSEP      | 39/41 | 9/41  | 37/41 | 35/41 | 38/41 | 23/41
 FiringRange | 56/73 | 34/73 | 54/73 | 48/73 | 61/73 | 27/73
 Juice Shop  | 1/1   | 1/1   | 0/1   | 1/1   | 0/1   | 0/1
@@ -23,6 +23,171 @@ MaraCMS     | 1/1   | 1/1   | 1/1   | 1/1   | 1/1   | 1/1
 Tailor      | 1/1   | 1/1   | 1/1   | 1/1   | 0/1   | 1/1
 TestLink    | 2/2   | 2/2   | 2/2   | 2/2   | 0/2   | 0/2
 
+
+## WAVSEP
+
+ID  | Title | HydraShort | Hydra | HydraStatic | w3af | AppScan
+------ | ------ | ------ | ------ | ------ | ------ | ------
+B01 | Case 1 - RXSS via tag injection into the scope of an HTML page | ✓ | ✓ | ✓ | ✓ | ✓
+B02 | Case 2 - RXSS via tag injection into the scope of an HTML tag | ✓ | ✕ | ✕ | ✓ | ✕
+B03 | Case 3 - RXSS via tag injection into the scope of an HTML tag structure | ✓ | ✓ | ✕ | ✓ | ✓
+B04 | Case 4 - RXSS via tag injection into the scope of an HTML comment | ✓ | ✓ | ✓ | ✓ | ✓
+B05 | Case 5 - RXSS via frame tag injection into the scope of an HTML frameset | ✕ | ✓ | ✓ | ✓ | ✓
+B06 | Case 6 - RXSS via DHTML event injection into the scope of an HTML tag | ✕ | ✓ | ✓ | ✓ | ✓
+B07 | Case 7 - RXSS via DHTML event injection into the scope of an HTML property (Double Quote Delimiter) | ✕ | ✓ | ✓ | ✓ | ✓
+B08 | Case 8 - RXSS via DHTML event injection into the scope of an HTML property (Single Quote Delimiter) | ✕ | ✓ | ✓ | ✓ | ✕
+B09 | Case 9 - RXSS via src property injection into the scope of an HTML tag structure (RFI) | ✕ | ✓ | ✕ | ✓ | ✓
+B10 | Case 10 - RXSS via Javascript injection into the scope of an HTML/Javascript Event (Double Quote Delimiter) | ✕ | ✓ | ✓ | ✓ | ✓
+B11 | Case 11 - RXSS via Javascript injection into the scope of an HTML/Javascript Event (Single Quote Delimiter) | ✕ | ✓ | ✓ | ✓ | ✓
+B12 | Case 12 - RXSS via Javascript injection into the scope of an HTML/Javascript Event (Any Delimiter) | ✕ | ✓ | ✓ | ✓ | ✓
+B13 | Case 13 - RXSS via VBScript injection into the scope of an HTML/VBScript Event (Double Quote Delimiter) | ✕ | ✓ | ✓ | ✓ | ✓
+B14 | Case 14 - RXSS via VBScript injection into the scope of an HTML/VBScript Event (Single Quote Delimiter) | ✕ | ✓ | ✓ | ✓ | ✕
+B15 | Case 15 - RXSS via VBScript injection into the scope of an HTML/VBScript Event (Any Delimiter) | ✕ | ✓ | ✓ | ✓ | ✕
+B16 | Case 16 - RXSS via Javascript injection into the scope of a script supporting property | ✓ | ✓ | ✓ | ✓ | ✓
+B17 | Case 17 - RXSS via Javascript injection into the scope of javascript code within a property (Double Quote String Delimiter) | ✕ | ✓ | ✓ | ✓ | ✓
+B18 | Case 18 - RXSS via Javascript injection into the scope of javascript code within a property (Single Quote String Delimiter) | ✕ | ✓ | ✓ | ✓ | ✓
+B19 | Case 19 - RXSS via Javascript injection into the scope of javascript code within a property (No String Delimiter) | ✕ | ✓ | ✓ | ✓ | ✓
+B20 | Case 20 - RXSS via VBScript injection into the scope of VBScript code within a property (Double Quote String Delimiter) | ✕ | ✓ | ✓ | ✓ | ✓
+B21 | Case 21 - RXSS via VBScript injection into the scope of VBScript code within a property (Single Quote String Delimiter) | ✕ | ✓ | ✓ | ✓ | ✕
+B22 | Case 22 - RXSS via Javascript injection into the scope of a script tag (Javascript, Double Quote String Delimiter) | ✕ | ✓ | ✓ | ✓ | ✓
+B23 | Case 23 - RXSS via Javascript injection into the scope of a script tag (Javascript, Single Quote String Delimiter) | ✕ | ✓ | ✓ | ✓ | ✓
+B24 | Case 24 - RXSS via Javascript injection into the scope of a script tag (Javascript, No String Delimiter) | ✕ | ✓ | ✓ | ✓ | ✓
+B25 | Case 25 - RXSS via VBScript injection into the scope of a script tag (VBScript, Double Quote String Delimiter) | ✕ | ✓ | ✓ | ✓ | ✕
+B26 | Case 26 - RXSS via VBScript injection into the scope of a script tag (VBScript, No String Delimiter) | ✕ | ✓ | ✓ | ✓ | ✕
+B27 | Case 27 - RXSS via Javascript injection into the scope of a script tag single line comment | ✕ | ✓ | ✓ | ✓ | ✕
+B28 | Case 28 - RXSS via Javascript injection into the scope of a script tag multiline comment | ✓ | ✓ | ✓ | ✓ | ✕
+B29 | Case 29 - RXSS via VBScript injection into the scope of a script tag single line comment | ✕ | ✓ | ✓ | ✓ | ✕
+B30 | Case 30 - RXSS via tag injection into the scope of an HTML page (Multiple RXSS Vulnerabilities) | ✓ | ✓ | ✓ | ✓ | ✓
+B31 | Case 31 - RXSS via tag injection into the scope of an HTML page (during an exception) | ✕ | ✕ | ✕ | ✓ | ✕
+B32 | Case 32 - RXSS via tag injection into the scope of an HTML page (Viewstate Required) | ✓ | ✕ | ✕ | ✓ | ✓
+E01 | Case 1 - RXSS via tag injection into the scope of an HTML page that Strips Script Tags | ✓ | ✓ | ✓ | ✓ | ✓
+E02 | Case 2 - RXSS via tag injection into the scope of an HTML page that only relies on secret POST input | ✕ | ✕ | ✕ | ✕ | ✕
+E03 | Case 3 - RXSS via tag injection into the scope of an HTML page that requires a constant session stored AntiCSRF token | ✕ | ✕ | ✕ | ✓ | ✓
+E04 | Case 4 - RXSS via tag injection into the scope of an HTML page that requires an expiring one-use session stored AntiCSRF token | ✕ | ✕ | ✕ | ✕ | ✕
+E05 | Scriptless Injection in HTML Form Tag Action Attribute scope of the HTML page. | ✕ | ✓ | ✓ | ✕ | ✕
+E06 | Scriptless Injection in HTML Base Tag Href Attribute scope of the HTML page. | ✕ | ✓ | ✓ | ✕ | ✕
+E07 | Scriptless Injection in HTML Script Tag Src Attribute scope of the HTML page. | ✕ | ✓ | ✓ | ✕ | ✕
+E08 | RXSS Injection in CSS Selector | ✕ | ✓ | ✓ | ✓ | ✕
+E09 | RXSS Injection in CSS Selector Atrribute Name | ✕ | ✓ | ✓ | ✓ | ✕
+E10 | RXSS Injection in CSS Property | ✕ | ✓ | ✓ | ✓ | ✕
+E11 | RXSS Injection in CSS Property Value | ✕ | ✓ | ✓ | ✓ | ✕
+
+
+## Firing Range
+
+ID  | Title | HydraShort | Hydra | HydraStatic | w3af | AppScan
+------ | ------ | ------ | ------ | ------ | ------ | ------
+F1 | Body - HTML escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F2 | Body - URL escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F3 | Head - HTML escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F4 | Head - URL escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F5 | Body HTML comment - HTML escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F6 | Body HTML comment - URL escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F7 | Textarea - HTML escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F8 | Textarea - URL escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F9 | Tag name - HTML escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F10 | Tag name - URL escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F11 | Attribute unquoted - HTML escaped | ✕ | ✕ | ✕ | ✓ | ✕
+F12 | Attribute unquoted - URL escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F13 | Attribute single quoted - HTML escaped | ✕ | ✕ | ✕ | ✓ | ✕
+F14 | Attribute single quoted - URL escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F15 | Attribute double quoted - HTML escaped | ✕ | ✕ | ✕ | ✓ | ✕
+F16 | Attribute double quoted - URL escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F17 | Attribute name - HTML escaped | ✕ | ✕ | ✕ | ✓ | ✕
+F18 | Attribute name - URL escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F19 | CSS - HTML escaped | ✕ | ✓ | ✓ | ✓ | ✕
+F20 | CSS - URL escaped | ✕ | ✓ | ✓ | ✕ | ✕
+F21 | CSS Value - HTML escaped | ✕ | ✓ | ✓ | ✓ | ✕
+F22 | CSS Value - URL escaped | ✕ | ✓ | ✓ | ✕ | ✕
+F23 | CSS Font Name - HTML escaped | ✕ | ✓ | ✓ | ✓ | ✕
+F24 | CSS Font Name - URL escaped | ✕ | ✓ | ✓ | ✕ | ✕
+F25 | Javascript unquoted assignment - HTML escaped | ✕ | ✓ | ✓ | ✓ | ✕
+F26 | Javascript unquoted assignment - URL escaped | ✕ | ✓ | ✓ | ✕ | ✕
+F27 | Javascript eval - HTML escaped | ✓ | ✓ | ✓ | ✓ | ✕
+F28 | Javascript eval - URL escaped | ✕ | ✓ | ✓ | ✕ | ✕
+F29 | Javascript quoted string - HTML escaped | ✓ | ✓ | ✓ | ✓ | ✕
+F30 | Javascript quoted string - URL escaped | ✕ | ✓ | ✓ | ✕ | ✕
+F31 | Javascript single quoted string - HTML escaped | ✓ | ✓ | ✓ | ✓ | ✕
+F32 | Javascript single quoted string - URL escaped | ✕ | ✓ | ✓ | ✕ | ✕
+F33 | Javascript slash quoted string - HTML escaped | ✓ | ✓ | ✓ | ✓ | ✕
+F34 | Javascript slash quoted string - URL escaped | ✕ | ✓ | ✓ | ✕ | ✕
+F35 | Javascript comment - HTML escaped | ✓ | ✓ | ✓ | ✓ | ✕
+F36 | Javascript comment - URL escaped | ✕ | ✓ | ✓ | ✕ | ✕
+F37 | Script SRC double quoted - HTML escaped | ✕ | ✓ | ✓ | ✓ | ✕
+F38 | Script SRC double quoted - URL escaped | ✕ | ✓ | ✓ | ✕ | ✕
+F39 | URL - HREF - HTML escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F40 | URL - HREF - URL escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F41 | URL - CSS - HTML escaped | ✕ | ✕ | ✕ | ✓ | ✕
+F42 | URL - CSS - URL escaped | ✕ | ✕ | ✕ | ✕ | ✕
+F43 | Eval payload after applying escape() | ✓ | ✓ | ✓ | ✓ | ✓
+F44 | Eval payload after applying encodeURIComponent() | ✓ | ✓ | ✓ | ✓ | ✓
+F45 | Eval payload after escaping &lt; | ✓ | ✓ | ✓ | ✓ | ✓
+F46 | Parameter - Body | ✓ | ✓ | ✓ | ✓ | ✓
+F47 | Parameter - Head | ✓ | ✓ | ✓ | ✓ | ✓
+F48 | Parameter - Title | ✓ | ✕ | ✕ | ✓ | ✓
+F49 | Parameter - Body HTML comment | ✓ | ✓ | ✓ | ✓ | ✓
+F50 | Parameter - Tag name | ✓ | ✓ | ✓ | ✓ | ✓
+F51 | Parameter - Attribute unquoted | ✓ | ✓ | ✕ | ✓ | ✓
+F52 | Parameter - Attribute single quoted | ✓ | ✓ | ✕ | ✓ | ✓
+F53 | Parameter - Attribute double quoted | ✓ | ✓ | ✕ | ✓ | ✓
+F54 | Parameter - Attribute name | ✓ | ✓ | ✕ | ✓ | ✕
+F55 | Parameter - Body - 400 | ✓ | ✓ | ✓ | ✓ | ✕
+F56 | Parameter - Body - 401 | ✓ | ✓ | ✓ | ✓ | ✕
+F57 | Parameter - Body - 403 | ✓ | ✓ | ✓ | ✓ | ✕
+F58 | Parameter - Body - 404 | ✓ | ✓ | ✓ | ✕ | ✕
+F59 | Parameter - Body - 500 | ✓ | ✓ | ✓ | ✕ | ✕
+F60 | Parameter - iFrame Attribute Value | ✕ | ✕ | ✕ | ✓ | ✓
+F61 | Parameter - iFrame srcdoc | ✕ | ✕ | ✕ | ✓ | ✓
+F62 | Parameter - Textarea | ✓ | ✕ | ✕ | ✓ | ✕
+F63 | Parameter - Textarea Attribute Value | ✕ | ✕ | ✕ | ✓ | ✕
+F64 | Parameter - NoScript | ✕ | ✕ | ✕ | ✓ | ✕
+F65 | Parameter - Style Attribute Value | ✕ | ✓ | ✕ | ✓ | ✕
+F66 | Parameter - CSS | ✓ | ✓ | ✓ | ✓ | ✕
+F67 | Parameter - CSS Value | ✓ | ✓ | ✓ | ✓ | ✕
+F68 | Parameter - CSS Font Name | ✓ | ✓ | ✓ | ✓ | ✕
+F69 | Parameter - unquoted onclick | ✕ | ✕ | ✕ | ✓ | ✓
+F70 | Parameter - quoted onclick | ✕ | ✕ | ✕ | ✓ | ✓
+F71 | Parameter - quoted onclick | ✕ | ✕ | ✕ | ✓ | ✓
+F72 | Parameter - Javascript unquoted assignment | ✓ | ✓ | ✓ | ✓ | ✓
+F73 | Parameter - Javascript eval | ✓ | ✓ | ✓ | ✓ | ✓
+F74 | Parameter - Javascript quoted string | ✓ | ✓ | ✓ | ✓ | ✓
+F75 | Parameter - Javascript single quoted string | ✓ | ✓ | ✓ | ✓ | ✓
+F76 | Parameter - Javascript slash quoted string | ✓ | ✓ | ✓ | ✓ | ✓
+F77 | Parameter - Javascript comment | ✓ | ✓ | ✓ | ✓ | ✕
+F78 | Parameter - Script SRC double quoted | ✕ | ✓ | ✓ | ✓ | ✕
+F79 | URL - HREF | ✕ | ✓ | ✓ | ✓ | ✓
+F80 | URL - CSS | ✕ | ✕ | ✕ | ✓ | ✓
+F81 | URL - Script SRC | ✕ | ✓ | ✓ | ✓ | ✕
+F82 | URL - Object DATA | ✕ | ✕ | ✕ | ✕ | ✕
+F83 | URL - Param SRC | ✕ | ✕ | ✕ | ✕ | ✕
+F84 | Parameter - JSON | ✕ | ✕ | ✕ | ✓ | ✓
+F85 | ContentSniffing | ✕ | ✕ | ✕ | ✓ | ✓
+F86 | ContentSniffing | ✕ | ✕ | ✕ | ✓ | ✓
+F87 | Parameter - Body - Blocks SpaceDoubleQuoteSlashEquals | ✕ | ✓ | ✓ | ✓ | ✕
+F88 | Parameter - Attribute unquoted - Blocks DoubleQuoteSinglequote | ✕ | ✓ | ✕ | ✓ | ✕
+F89 | Parameter - Body - Blocks lowercase script | ✓ | ✓ | ✓ | ✓ | ✕
+F90 | Parameter - Body - Blocks uppercase script | ✓ | ✓ | ✓ | ✓ | ✕
+F91 | Parameter - Body - Blocks any script | ✕ | ✓ | ✓ | ✓ | ✕
+
+## Juice Shop
+
+ID  | Title | HydraShort | Hydra | HydraStatic | w3af | AppScan
+------ | ------ | ------ | ------ | ------ | ------ | ------
+Juice | Search request/location hash | ✓ | ✕ | ✓ | ✕ | ✕
+
+## Real-world applications
+
+ID  | Title | HydraShort | Hydra | HydraStatic | w3af | AppScan
+------ | ------ | ------ | ------ | ------ | ------ | ------
+MyBB | MyBB ModCP finduser | ✓ | ✕ | ✕ | ✕ | ✓
+Mara | MaraCMS theme | ✓ | ✓ | ✓ | ✓ | ✓
+Tailor | Tailor Login | ✓ | ✓ | ✓ | ✕ | ✓
+TL01 | TestLink reqURI | ✓ | ✓ | ✓ | ✕ | ✕
+TL02 | TestLink show_mode | ✓ | ✓ | ✓ | ✕ | ✕
+
+# Old Appendix
+
+The following material was created based on the original draft of our work.
 
 ## WAVSEP
 
