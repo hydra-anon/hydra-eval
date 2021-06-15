@@ -1,6 +1,28 @@
-## Hydra evaluation results
+# Hydra evaluation results
 
 This page presents the detailed results of the evaluation of the XSS prototype of Hydra, a feedback-driven approach for the dynamic exploitation of injection vulnerabilities.
+
+## Errata
+
+The following issues are present in the most recent submitted version of our work. They will be corrected as soon as possible.
+
+* The tools legend in the figures detailing the results of the evaluation do not explain what "Hydra", "HydraShort" and "HydraStatic" mean. "HydraShort" is Hydra using the XSS polyglot shortcut. "Hydra" is the dynamic version of Hydra without using the polyglot. "HydraStatic" is the static version of Hydra without using the polyglot.
+
+
+## Overview
+
+The following table briefly summarizes the success rate of the investigated tools when applied to various SUTs. Please note that SUTs that could not be exploited by any of the tools are excluded here.
+
+Application | HydraShort+Hydra | HydraShort | Hydra | HydraStatic | w3af | AppScan
+-------- | -------- | -------- | -------- | -------- | --------
+WAVSEP      | 39/41 | 9/41  | 37/41 | 35/41 | 38/41 | 23/41
+FiringRange | 56/73 | 34/73 | 54/73 | 48/73 | 61/73 | 27/73
+Juice Shop  | 1/1   | 1/1   | 0/1   | 1/1   | 0/1   | 0/1
+MyBB        | 1/1   | 1/1   | 0/1   | 0/1   | 0/1   | 1/1
+MaraCMS     | 1/1   | 1/1   | 1/1   | 1/1   | 1/1   | 1/1
+Tailor      | 1/1   | 1/1   | 1/1   | 1/1   | 0/1   | 1/1
+TestLink    | 2/2   | 2/2   | 2/2   | 2/2   | 0/2   | 0/2
+
 
 ## WAVSEP
 
