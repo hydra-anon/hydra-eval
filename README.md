@@ -2,12 +2,6 @@
 
 This page presents the detailed results of the evaluation of the XSS prototype of Hydra, a feedback-driven approach for the dynamic exploitation of injection vulnerabilities.
 
-## Errata
-
-The following issues are present in the most recent submitted version of our work. They will be corrected as soon as possible.
-
-* The tools legend in the figures detailing the results of the evaluation do not explain what "Hydra", "HydraShort" and "HydraStatic" mean. "HydraShort" is Hydra using the XSS polyglot shortcut. "Hydra" is the dynamic version of Hydra without using the polyglot. "HydraStatic" is the static version of Hydra without using the polyglot.
-
 
 ## Overview
 
@@ -364,5 +358,7 @@ TL02 | 2 | 124-379 | 2-3 | ✕ | ✕
 ![Juice Shop and real-world applications evaluation results](others.png)
 
 # Additional Material
+
+The raw data underlying the plots above can be downloaded [here](plot-data.tar.bz2).
 
 While we would like to offer a download of the Hydra source code at this time, contractual funding obligations prevent us from doing so at this time. We are working on offering a solution, once the paper is accepted.
