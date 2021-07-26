@@ -338,6 +338,6 @@ TL02 | 2 | 124-379 | 2-3 | ✕ | ✕
 
 # Additional Material
 
-The raw data underlying the plots above can be downloaded [here](plot-data.tar.bz2).
+The raw data underlying the plots and tables above can be downloaded [here](raw-results.tsv).
 
 While we would like to offer a download of the Hydra source code at this time, contractual funding obligations prevent us from doing so at this time. We are working on offering a solution, once the paper is accepted.
